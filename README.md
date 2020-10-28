@@ -1,1 +1,1 @@
-link to gh-pages
+https://m-spiridon.github.io/cognitive-biases/
