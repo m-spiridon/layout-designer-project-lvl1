@@ -1,7 +1,9 @@
+/* * {
+    border: 1px dashed black;
+} */
+
 /* 1. Structure */
 .container {
-    position: relative;
-
     max-width: 1110px;
 
     padding: 100px 0;
@@ -75,12 +77,19 @@
     opacity: 0.1;
 }
 .main-img {
-    position: absolute;
+    display: block;
+
+    position: relative;
 
     height: 525px;
 
-    top: 55px;
+    margin: 0px 0px 0px auto;
+
     right: -270px;
+}
+.head-cont {
+    position: relative;
+    top: -45px;
 }
 .p-12-24 {
     padding: 12px 24px;
@@ -136,7 +145,7 @@ h1 {
 
     margin: 0;
 
-    height: 480px;
+    position: absolute;
 }
 h2 {
     font-size: 60px;
