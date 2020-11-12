@@ -6,11 +6,13 @@
     --secondary-color: #908d8b;
     --bg-light-color: #f5f4f0;
     --bg-dark-color: #b09a81;
-    --footer-links-color: #1085c5;
+    --blue-color: #1085c5;
     --titles-font: 'Neucha', cursive;
 }
 
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -20,7 +22,7 @@ body {
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
-    line-height: 160%;
+    line-height: 1.6;
     color: var(--text-main-color);
 }
 
@@ -29,6 +31,10 @@ h2,
 h3,
 h4 {
     margin: 0;
+}
+
+img {
+    display: block;
 }
 
 .bg-img {
@@ -54,10 +60,12 @@ h4 {
     max-width: 1110px;
     margin: 0 auto;
     padding: 100px 0;
+    z-index: 1;
 }
 
-.header-padding {
-    padding: 0 0 100px 0;
+.header-title {
+    margin-bottom: 170px;
+    padding-top: 20px;
 }
 
 .columns-container {
@@ -67,35 +75,39 @@ h4 {
 }
 
 .left-column {
+    flex: 1;
     width: 50%;
     padding-right: 15px;
 }
 
 .right-column {
+    flex: 1;
     width: 50%;
     padding-left: 15px;
 }
 
-.main-img {
-    position: relative;
+.header-img {
+    position: absolute;
     top: 55px;
     right: -270px;
-    display: block;
     height: 525px;
-    margin: 0 0 0 auto;
+    z-index: -1;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
 }
 
 .details-link {
     display: block;
     width: max-content;
-    margin-top: 38px;
     padding: 12px 24px;
     text-decoration: none;
 }
 
 .video {
     display: block;
-    margin: 30px auto -200px;
+    margin: 0 auto -200px;
     filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.15));
     border: none;
 }
@@ -133,7 +145,7 @@ h4 {
 }
 
 .card-number {
-    margin-bottom: 40px;
+    margin: 0 0 40px 0;
     font-family: var(--titles-font);
     font-style: normal;
     font-weight: normal;
@@ -166,6 +178,7 @@ h4 {
 .contact-block {
     align-items: center;
     padding: 40px 50px;
+    margin-bottom: 60px;
 }
 
 .email-form {
@@ -205,13 +218,8 @@ h4 {
     background-position: center;
 }
 
-.references {
-    margin-top: 60px;
-    font-size: 14px;
-}
-
 .references a {
-    color: var(--footer-links-color);
+    color: var(--blue-color);
 }
 
 /* Сolors */
@@ -251,14 +259,11 @@ h4 {
 /* Text styles */
 
 .title-1 {
-    position: absolute;
-    top: 100px;
     font-family: var(--titles-font);
     font-style: normal;
     font-weight: normal;
     font-size: 72px;
-    line-height: 120%;
-    z-index: 1;
+    line-height: 1.2;
 }
 
 .title-2 {
@@ -267,7 +272,7 @@ h4 {
     font-style: normal;
     font-weight: normal;
     font-size: 60px;
-    line-height: 120%;
+    line-height: 1.2;
 }
 
 .title-3 {
@@ -275,7 +280,7 @@ h4 {
     font-style: normal;
     font-weight: normal;
     font-size: 34px;
-    line-height: 120%;
+    line-height: 1.2;
 }
 
 .title-4 {
@@ -283,7 +288,7 @@ h4 {
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
-    line-height: 120%;
+    line-height: 1.2;
 }
 
 .text-bold {
@@ -303,7 +308,7 @@ h4 {
     font-style: normal;
     font-weight: normal;
     font-size: 52px;
-    line-height: 120%;
+    line-height: 1.2;
 }
 
 .footer-title {
@@ -311,10 +316,9 @@ h4 {
     font-style: normal;
     font-weight: normal;
     font-size: 36px;
-    line-height: 120%;
+    line-height: 1.2;
 }
 
 .agreement-text {
-    margin-top: 8px;
     font-size: 12px;
 }
