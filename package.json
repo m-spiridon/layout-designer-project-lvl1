@@ -1,0 +1,25 @@
+{
+  "name": "layout-designer-project-lvl1",
+  "version": "1.0.0",
+  "description": "http://m-spiridon-cognitive-biases.surge.sh/",
+  "main": "index.js",
+  "dependencies": {
+    "htmlhint": "^0.14.1",
+    "stylelint": "^13.7.2",
+    "stylelint-config-standard": "^20.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m-spiridon/layout-designer-project-lvl1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/m-spiridon/layout-designer-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/m-spiridon/layout-designer-project-lvl1#readme"
+}
