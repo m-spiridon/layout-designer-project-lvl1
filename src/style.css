@@ -8,12 +8,17 @@
     --bg-dark-color: #b09a81;
     --blue-color: #1085c5;
     --titles-font: 'Neucha', cursive;
+    --shadow: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.15));
 }
 
 *,
 *::before,
 *::after {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -31,6 +36,14 @@ h2,
 h3,
 h4 {
     margin: 0;
+}
+
+p {
+    margin-top: 0;
+}
+
+p:last-child {
+    margin-bottom: 0;
 }
 
 small {
@@ -109,38 +122,28 @@ img {
     display: block;
     margin: 0 auto -200px;
     border: none;
-    filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.15));
-}
-
-.cards-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding-top: 200px;
+    filter: var(--shadow);
 }
 
 .card {
     display: block;
-    width: 32%;
+    height: 100%;
     padding: 24px;
     color: var(--text-main-color);
     text-decoration: none;
 }
 
-.card:first-child {
-    padding: 0;
+.card-title {
+    margin-bottom: 4px;
+    color: var(--primary-color);
 }
 
-.card:nth-child(-n+3) {
-    margin-bottom: 20px;
+.card:hover {
+    color: var(--white-color);
+    background-color: var(--primary-color);
 }
 
-.card:nth-child(n+2):hover {
-    background: var(--primary-color);
-}
-
-.card:nth-child(n+2):hover * {
+.card:hover .card-title {
     color: var(--white-color);
 }
 
@@ -156,11 +159,11 @@ img {
 .section-img {
     width: 100%;
     height: auto;
-    filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.15));
+    filter: var(--shadow);
 }
 
 .section-subtitle {
-    margin: 100px 0 20px;
+    margin: 0 0 20px 0;
     padding: 4px 0 4px 8px;
     font-size: 14px;
 }
@@ -208,24 +211,6 @@ img {
     content: "";
 }
 
-/* Additional margins */
-
-.mb-30 {
-    margin-bottom: 30px;
-}
-
-.no-mb {
-    margin-bottom: 0;
-}
-
-.no-mt {
-    margin-top: 0;
-}
-
-.mb-8 {
-    margin-bottom: 8px;
-}
-
 /* Text styles */
 
 .title-1 {
@@ -237,7 +222,6 @@ img {
 }
 
 .title-2 {
-    margin-bottom: 30px;
     font-weight: normal;
     font-size: 60px;
     font-family: var(--titles-font);
@@ -289,48 +273,82 @@ img {
     line-height: 1.2;
 }
 
-.agreement-text {
+.fz-12 {
     font-size: 12px;
 }
 
-.references {
+.fz-14 {
     font-size: 14px;
 }
 
 /* Сolors */
 
 .bg-light {
-    background: var(--bg-light-color);
+    background-color: var(--bg-light-color);
 }
 
 .bg-primary {
-    background: var(--primary-color);
+    background-color: var(--primary-color);
 }
 
 .bg-primary-dark {
-    background: var(--primary-dark-color);
+    background-color: var(--primary-dark-color);
 }
 
 .bg-dark {
-    background: var(--bg-dark-color);
+    background-color: var(--bg-dark-color);
 }
 
-.text-primary {
+.color-primary {
     color: var(--primary-color);
 }
 
-.text-white {
+.color-white {
     color: var(--white-color);
 }
 
-.text-secondary {
+.color-secondary {
     color: var(--secondary-color);
 }
 
 .bg-white {
-    background: var(--white-color);
+    background-color: var(--white-color);
 }
 
-.references a {
+.copyright-link-color {
     color: var(--blue-color);
+}
+
+/* Other utility classess */
+
+.mb-4 {
+    margin-bottom: 4px;
+}
+
+.mb-8 {
+    margin-bottom: 8px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-24 {
+    margin-bottom: 24px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mb-100 {
+    margin-bottom: 100px;
+}
+
+.no-mt {
+    margin-top: 0;
+}
+
+.pt-100 {
+    padding-top: 100px;
 }
