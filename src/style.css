@@ -302,11 +302,11 @@ img {
     background-color: var(--primary-color);
 }
 
-.bg-primary-dark {
+.bg-medium-dark {
     background-color: var(--medium-dark-color);
 }
 
-.bg-dark {
+.bg-light-dark {
     background-color: var(--light-dark-color);
 }
 
