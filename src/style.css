@@ -1,11 +1,11 @@
 :root {
-    --text-main-color: #2a2626;
+    --black-color: #2a2626;
     --white-color: #fff;
     --primary-color: #fe8a02;
     --primary-dark-color: #42413c;
     --secondary-color: #908d8b;
-    --bg-light-color: #f5f4f0;
-    --bg-dark-color: #b09a81;
+    --light-color: #f5f4f0;
+    --dark-color: #b09a81;
     --blue-color: #1085c5;
     --titles-font: 'Neucha', cursive;
     --shadow: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.15));
@@ -18,12 +18,13 @@
 }
 
 html {
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
-    color: var(--text-main-color);
+    color: var(--black-color);
     font-weight: normal;
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
@@ -128,7 +129,7 @@ img {
     display: block;
     height: 100%;
     padding: 24px;
-    color: var(--text-main-color);
+    color: var(--black-color);
     text-decoration: none;
 }
 
@@ -179,7 +180,6 @@ img {
 
 .email-label {
     flex: 1 0 auto;
-    font-size: 18px;
 }
 
 .email-input {
@@ -280,10 +280,14 @@ img {
     font-size: 14px;
 }
 
+.fz-18 {
+    font-size: 18px;
+}
+
 /* Сolors */
 
 .bg-light {
-    background-color: var(--bg-light-color);
+    background-color: var(--light-color);
 }
 
 .bg-primary {
@@ -295,7 +299,7 @@ img {
 }
 
 .bg-dark {
-    background-color: var(--bg-dark-color);
+    background-color: var(--dark-color);
 }
 
 .color-primary {
