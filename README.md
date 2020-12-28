@@ -1,1 +1,1 @@
-http://m-spiridon-cognitive-biases.surge.sh/
+http://m-spiridon-p1.surge.sh/
