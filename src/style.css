@@ -20,14 +20,20 @@
 
 html {
     overflow-x: hidden;
+    font-size: 1rem;
     scroll-behavior: smooth;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 1.3rem;
+    }
 }
 
 body {
     margin: 0;
     color: var(--dark-color);
     font-weight: normal;
-    font-size: 16px;
     font-family: var(--body-copy-font);
     font-style: normal;
     line-height: 1.6;
@@ -48,10 +54,6 @@ p:last-child {
     margin-bottom: 0;
 }
 
-small {
-    font-size: inherit;
-}
-
 img {
     display: block;
 }
@@ -63,19 +65,48 @@ img {
     z-index: 1;
     max-width: 1110px;
     margin: 0 auto;
-    padding: 100px 0;
+    padding: 100px 20px;
 }
 
 .row {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     margin: 0 -15px;
 }
 
-.column {
+@media (max-width: 720px) {
+    .row {
+        display: block;
+    }
+}
+
+.col {
     flex: 1 1 0;
     padding: 0 15px;
+}
+
+.columns {
+    columns: 2 200px;
+    column-gap: 30px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    row-gap: 20px;
+}
+
+@media (max-width: 992px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 /* Background elements */
@@ -115,15 +146,37 @@ img {
 
 .details-link {
     display: inline-block;
-    padding: 12px 24px;
+    padding: 12px 36px;
+    text-align: center;
     text-decoration: none;
+    border-radius: 5px;
+}
+
+.details-link:hover {
+    opacity: 0.8;
 }
 
 .video {
-    display: block;
+    position: relative;
     margin: 0 auto -200px;
-    border: none;
+    padding-bottom: 56.25%;
     filter: var(--shadow);
+}
+
+@media (max-width: 768px) {
+    .video {
+        padding-bottom: 75%;
+    }
+}
+
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 5px;
 }
 
 .card {
@@ -132,6 +185,7 @@ img {
     padding: 24px;
     color: var(--dark-color);
     text-decoration: none;
+    border-radius: 5px;
 }
 
 .card-title {
@@ -151,7 +205,7 @@ img {
 .card-number {
     margin: 0 0 40px 0;
     font-weight: normal;
-    font-size: 64px;
+    font-size: 3rem;
     font-family: var(--titles-font);
     font-style: normal;
     line-height: 1;
@@ -160,13 +214,22 @@ img {
 .section-img {
     width: 100%;
     height: auto;
+    border-radius: 3%;
     filter: var(--shadow);
+}
+
+@media (max-width: 720px) {
+    .section-img {
+        max-width: 500px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
 }
 
 .section-subtitle {
     margin: 0 0 20px 0;
     padding: 4px 8px;
-    font-size: 14px;
+    border-radius: 5px;
 }
 
 .contact-block {
@@ -180,15 +243,16 @@ img {
 }
 
 .email-label {
-    flex: 1 0 auto;
+    display: inline-block;
 }
 
 .email-input {
+    display: block;
     width: 100%;
     height: 50px;
-    margin-top: 8px;
     padding: 15px;
     color: var(--dark-color);
+    font-size: inherit;
     font-family: var(--body-copy-font);
     border: none;
 }
@@ -200,10 +264,15 @@ img {
 
 .send-button {
     position: relative;
-    width: 70px;
+    display: block;
+    flex: 0 0 60px;
     height: 50px;
-    margin: auto 0 0 auto;
+    padding: 0;
     border: none;
+}
+
+.send-button:hover {
+    opacity: 0.8;
 }
 
 .send-button::before {
@@ -222,7 +291,7 @@ img {
 
 .title-1 {
     font-weight: normal;
-    font-size: 72px;
+    font-size: 3.25rem;
     font-family: var(--titles-font);
     font-style: normal;
     line-height: 1.2;
@@ -230,7 +299,7 @@ img {
 
 .title-2 {
     font-weight: normal;
-    font-size: 60px;
+    font-size: 2.75rem;
     font-family: var(--titles-font);
     font-style: normal;
     line-height: 1.2;
@@ -238,15 +307,7 @@ img {
 
 .title-3 {
     font-weight: normal;
-    font-size: 34px;
-    font-family: var(--titles-font);
-    font-style: normal;
-    line-height: 1.2;
-}
-
-.title-4 {
-    font-weight: normal;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: var(--titles-font);
     font-style: normal;
     line-height: 1.2;
@@ -264,32 +325,14 @@ img {
     text-align: center;
 }
 
-.nav-title {
-    font-weight: normal;
-    font-size: 52px;
-    font-family: var(--titles-font);
-    font-style: normal;
-    line-height: 1.2;
+@media (max-width: 720px) {
+    .text-center-md {
+        text-align: center;
+    }
 }
 
-.footer-title {
-    font-weight: normal;
-    font-size: 36px;
-    font-family: var(--titles-font);
-    font-style: normal;
-    line-height: 1.2;
-}
-
-.fz-12 {
-    font-size: 12px;
-}
-
-.fz-14 {
-    font-size: 14px;
-}
-
-.fz-18 {
-    font-size: 18px;
+.fz-smaller {
+    font-size: smaller;
 }
 
 /* Сolors */
@@ -332,16 +375,8 @@ img {
 
 /* Other utility classess */
 
-.mb-4 {
-    margin-bottom: 4px;
-}
-
 .mb-8 {
     margin-bottom: 8px;
-}
-
-.mb-20 {
-    margin-bottom: 20px;
 }
 
 .mb-24 {
@@ -352,14 +387,24 @@ img {
     margin-bottom: 30px;
 }
 
-.mb-100 {
-    margin-bottom: 100px;
+@media (max-width: 720px) {
+    .mb-md-30 {
+        margin-bottom: 30px;
+    }
 }
 
-.no-mt {
-    margin-top: 0;
+.mb-60 {
+    margin-bottom: 60px;
 }
 
 .pt-100 {
     padding-top: 100px;
+}
+
+.order {
+    order: 1;
+}
+
+.ai-center {
+    align-items: center;
 }
