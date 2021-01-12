@@ -3,9 +3,9 @@
     font-size: 1.5em;
     text-decoration: none;
 
-    opacity: 1;
+  opacity: 1;
 
-    transition: 200ms;
+  transition: 200ms;
   }
 
 .container a:hover {
