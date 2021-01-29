@@ -13,39 +13,46 @@
 
 <body>
     <header>
-        <nav class="menu-wrapper center-container">
-            <input type="checkbox" id="burger">
-            <label class="burger-icon" for="burger">
-                <span class="burger-line"></span>
-                <span class="burger-line"></span>
-                <span class="burger-line"></span>
-            </label>
-            <ul class="menu">
-                <li><a class="menu-item" href="#begin">Начало</a></li>
-                <li><a class="menu-item" href="#video">Видео</a></li>
-                <li class="dropdown">
-                    <a class="menu-item dropbtn" href="#cards">5 Искажений</a>
-                    <ul class="submenu">
-                        <li><a class="menu-item" href="#ikea-effect">Правда?</a></li>
-                        <li><a class="menu-item" href="#early-optimisation">Та ладно!</a></li>
-                        <li><a class="menu-item" href="#recency-bias">Серьезно?</a></li>
-                        <li><a class="menu-item" href="#depreciation">Что-ооо?</a></li>
-                        <li><a class="menu-item" href="#planning-mistake">Ну дела!</a></li>
-                    </ul>
-                </li>
-                <li><a class="menu-item" href="#subscribe">Подписаться</a></li>
-            </ul>
-        </nav>
+        <div class="menu-wrapper">
+            <nav class="center-container">
+                <input type="checkbox" id="burger">
+                <label class="burger-icon" for="burger">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </label>
+                <ul class="menu">
+                    <li><a class="menu-item" href="#begin">Начало</a></li>
+                    <li><a class="menu-item" href="#video">Видео</a></li>
+                    <li class="dropdown">
+                        <a class="menu-item dropbtn" href="#cards">5 Искажений</a>
+                        <ul class="submenu">
+                            <li><a class="menu-item" href="#ikea-effect">Правда?</a></li>
+                            <li><a class="menu-item" href="#early-optimisation">Та ладно!</a></li>
+                            <li><a class="menu-item" href="#recency-bias">Серьезно?</a></li>
+                            <li><a class="menu-item" href="#depreciation">Что-ооо?</a></li>
+                            <li><a class="menu-item" href="#planning-mistake">Ну дела!</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="menu-item" href="#subscribe">Подписаться</a></li>
+                </ul>
+            </nav>
+        </div>
         <div class="progress-bar"></div>
     </header>
     <main>
 
         <section id="begin" class="bg-img bg-light">
             <div class="center-container py-100">
-                <h1 class="title-1 header-title"><span class="color-primary">Когнитив&shy;ные <br>искажения</span><br>в
-                    програм&shy;мировании</h1>
-                <!-- <img class="header-img" src="images/main.png" alt="Сидящий человечек за ноутбуком" width="1155"
-                    height="560"> -->
+                <div class="row mb-24">
+                    <div class="col text-center-md">
+                        <h1 class="title-1 mb-24"><span class="color-primary">Когнитив&shy;ные <br>искажения</span><br>в
+                            програм&shy;мировании</h1>
+                    </div>
+                    <div class="col">
+                        <img class="section-img" src="images/main.png" alt="Сидящий человечек за ноутбуком" width="578" height="434">
+                    </div>
+                </div>
                 <div class="row text-row">
                     <div class="col columns">
                         <p>Мы, разработчики, часто сталкиваемся с проблемами, которые идут вразрез с нашей продуктивностью. Они могут формировать что-то вроде замкнутого цикла, и это может привести к длительной потере продуктивности, багам и бесконечному разочарованию. </p>

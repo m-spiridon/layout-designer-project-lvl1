@@ -26,7 +26,7 @@ html {
 
 }
 
-@media (min-width: 768px) {
+@media (min-width: 720px) {
     html {
         font-size: 1.1rem;
     }
@@ -289,6 +289,8 @@ img {
     border-radius: 3px;
 
     background-color: var(--secondary-color);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
 }
 
 #burger {
@@ -311,21 +313,19 @@ img {
     background-color: var(--light-color);
 }
 
+#burger:checked ~ .burger-icon .burger-line:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+#burger:checked ~ .burger-icon .burger-line:nth-child(2) {
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#burger:checked ~ .burger-icon .burger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
 /* Other elements */
-
-.header-title {
-    margin-bottom: 170px;
-    padding-top: 20px;
-}
-
-.header-img {
-    position: absolute;
-    top: 55px;
-    right: -270px;
-    z-index: -1;
-
-    height: 525px;
-}
 
 .details-link {
     display: inline-block;
@@ -349,7 +349,7 @@ img {
     filter: var(--drop-shadow);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 720px) {
     .video {
         padding-bottom: 75%;
     }
