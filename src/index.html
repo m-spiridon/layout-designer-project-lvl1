@@ -12,59 +12,51 @@
 </head>
 
 <body>
-            
-    <!-- <nav class="container">
-      <div id="menuToggle">
-        <input type="checkbox" />
-          <span></span>
-          <span></span>
-          <span></span>
-          
-          <ul id="menu">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Info</a></li>
-              <li><a href="#">Contact</a></li>
-          </ul>
-     </div>
-    </nav> -->
-
-    <header class="bg-img bg-light">
-        <nav class="menu">
-            <ul>
-                <li>Начало</li>
-                <li>Видео</li>
-                <li>5 Искажений
-                    <ul>
-                        <li>Правда?</li>
-                        <li>Та ладно!</li>
-                        <li>Серьезно?</li>
-                        <li>Что-ооо?</li>
-                        <li>Ну дела!</li>
+    <header>
+        <nav class="menu-wrapper center-container">
+            <input type="checkbox" id="burger">
+            <label class="burger-icon" for="burger">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </label>
+            <ul class="menu">
+                <li><a class="menu-item" href="#begin">Начало</a></li>
+                <li><a class="menu-item" href="#video">Видео</a></li>
+                <li class="dropdown">
+                    <a class="menu-item dropbtn" href="#cards">5 Искажений</a>
+                    <ul class="submenu">
+                        <li><a class="menu-item" href="#ikea-effect">Правда?</a></li>
+                        <li><a class="menu-item" href="#early-optimisation">Та ладно!</a></li>
+                        <li><a class="menu-item" href="#recency-bias">Серьезно?</a></li>
+                        <li><a class="menu-item" href="#depreciation">Что-ооо?</a></li>
+                        <li><a class="menu-item" href="#planning-mistake">Ну дела!</a></li>
                     </ul>
                 </li>
-                <li>Подписаться</li>
+                <li><a class="menu-item" href="#subscribe">Подписаться</a></li>
             </ul>
-
         </nav>
+        <div class="progress-bar"></div>
+    </header>
+    <main>
 
-        <div class="center-container">
-            <h1 class="title-1 header-title"><span class="color-primary">Когнитив&shy;ные <br>искажения</span><br>в
-                програм&shy;мировании</h1>
-            <!-- <img class="header-img" src="images/main.png" alt="Сидящий человечек за ноутбуком" width="1155"
-                height="560"> -->
-            <div class="row text-row">
-                <div class="col columns">
-                    <p>Мы, разработчики, часто сталкиваемся с проблемами, которые идут вразрез с нашей продуктивность. Но мы часто игнорируем целостную картину. Некоторые из этих проблем малозаметны, некоторые существенны. Иногда с ними можно как-то справиться, а иногда, к сожалению, нет. Вместе они формируют что-то вроде замкнутого цикла, и это может привести к длительной потере продуктивности, багам и бесконечному разочарованию. </p>
-                    <p class="mb-30"> Если мы сможем минимизировать воздействие одного или нескольких из этих факторов, то сможем сломать и цикл, а остатки нейтрализовать</p>
-                    <p><a href="#cards" class="details-link bg-primary color-white text-bold uppercase">Подробнее</a></p>
+        <section id="begin" class="bg-img bg-light">
+            <div class="center-container py-100">
+                <h1 class="title-1 header-title"><span class="color-primary">Когнитив&shy;ные <br>искажения</span><br>в
+                    програм&shy;мировании</h1>
+                <!-- <img class="header-img" src="images/main.png" alt="Сидящий человечек за ноутбуком" width="1155"
+                    height="560"> -->
+                <div class="row text-row">
+                    <div class="col columns">
+                        <p>Мы, разработчики, часто сталкиваемся с проблемами, которые идут вразрез с нашей продуктивностью. Они могут формировать что-то вроде замкнутого цикла, и это может привести к длительной потере продуктивности, багам и бесконечному разочарованию. </p>
+                        <p class="mb-30"> Если мы сможем минимизировать воздействие одной или нескольких из этих порблем, то сможем сломать и цикл, а остатки нейтрализовать</p>
+                        <a href="#cards" class="details-link bg-primary color-white text-bold uppercase">Подробнее</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </section>
 
-    <main>
-        <section class="center-container">
+        <section id="video" class="center-container py-100">
             <h2 class="title-2 text-center mb-30">Что же это такое,<br><span class="color-primary">когнитив&shy;ные
                     искажения?</span></h2>
             <p class="text-center mb-30">Что такое когнитивные искажения. Petrovna Channel</p>
@@ -73,8 +65,8 @@
             </div>
         </section>
 
-        <nav id="cards" class="bg-medium-dark">
-            <div class="center-container">
+        <section id="cards" class="bg-medium-dark">
+            <div class="center-container py-100">
                 <div class="grid pt-100">
                     <h2 class="title-2 color-white"><span class="color-primary">5 когнитивных искажений,</span><br>о которых стоит помнить</h2>
                     <a href="#ikea-effect" class="card bg-light">
@@ -105,10 +97,10 @@
                     </a>
                 </div>
             </div>
-        </nav>
+        </section>
 
         <section id="ikea-effect" class="bg-img bg-light">
-            <div class="center-container">
+            <div class="center-container py-100">
                 <div class="row mb-60">
                     <div class="col">
                         <img class="section-img" src="images/1.png" alt="Удивленные человечки перед монитором"
@@ -131,7 +123,7 @@
         </section>
 
         <section id="early-optimisation" class="bg-img bg-light-dark">
-            <div class="center-container">
+            <div class="center-container py-100">
                 <div class="row  mb-60">
                     <div class="col order">
                         <img class="section-img" src="images/2.png" alt="Человечек и стартующая из ноутбука ракета"
@@ -154,7 +146,7 @@
         </section>
 
         <section id="recency-bias" class="bg-img bg-light">
-            <div class="center-container">
+            <div class="center-container py-100">
                 <div class="row  mb-60">
                     <div class="col">
                         <img class="section-img" src="images/3.png"
@@ -178,7 +170,7 @@
         </section>
 
         <section id="depreciation" class="bg-img bg-light-dark">
-            <div class="center-container">
+            <div class="center-container py-100">
                 <div class="row  mb-60">
                     <div class="col order">
                         <img class="section-img" src="images/4.png"
@@ -194,15 +186,15 @@
                 <h4 class="section-subtitle bg-white text-bold uppercase">Как проявляется</h4>
                 <div class="row">
                     <div class="col columns color-white">
-                        <p>Вы когда-нибудь откладывали написание теста? Ловили себя на использовании клавиш-стрелок в Vim? Поздравляю, у вас наблюдается гиперболическое обесценивание.</p>
-                        <p>Немедленная выгода от использования чего-то быстродоступного значительно смягчает боль, которую нужно перетерпеть, чтобы усвоить правильный синтаксис для перемещения на нужную строчку. Но как только вы поймёте как перемещаться быстрее, выгода в будущем намного выше. В итоге вы сохраните много времени</p>
+                        <p>Вы когда-нибудь откладывали написание теста? Ловили себя на использовании клавиш-стрелок в Vim? Поздравляю, у вас наблюдается гиперболическое обесценивание. Немедленная выгода от использования чего-то быстродоступного значительно смягчает боль.</p>
+                        <p>Но освоив правильный синтаксис для перемещения на нужную строчку, вы поймёте, что будущая выгода будет намного выше сиюминутной. В итоге вы сохраните много времени</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="planning-mistake" class="bg-img bg-light">
-            <div class="center-container">
+            <div class="center-container py-100">
                 <div class="row mb-60">
                     <div class="col">
                         <img class="section-img" src="images/5.png" alt="Человечек пишет чеклист и часы на фоне"
@@ -224,7 +216,7 @@
         </section>
     </main>
 
-    <footer class="center-container">
+    <footer id="subscribe" class="center-container py-100">
         <div class="contact-block bg-medium-dark">
             <div class="row ai-center">
                 <h2 class="col title-3 color-white mb-md-30">Хотите узнать больше? Подпишитесь на обновления</h2>
@@ -247,6 +239,8 @@
                         Hexlet</a></small></p>
         </div>
     </footer>
+
+    <script src="index.js"></script>
 </body>
 
 </html>
