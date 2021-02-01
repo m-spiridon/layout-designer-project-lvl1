@@ -7,3 +7,13 @@ function scroll() {
   const progressBarWidth = (distanceFromTop / pageHeight) * 100;
   document.querySelector('.progress-bar').style.width = progressBarWidth + '%';
 }
+
+//Close menu on click outside
+
+var close = document.getElementsByClassName("close")[0];
+
+window.onclick = function(e) {
+  if (e.target == close) {
+    document.getElementById("burger").checked = false;
+  }
+}

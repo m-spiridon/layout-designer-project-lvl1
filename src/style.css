@@ -19,11 +19,8 @@
 }
 
 html {
-    overflow-x: hidden;
-
     font-size: 1rem;
     scroll-behavior: smooth;
-
 }
 
 @media (min-width: 720px) {
@@ -34,6 +31,7 @@ html {
 
 body {
     margin: 0;
+    overflow-x: hidden;
 
     color: var(--dark-color);
     font-weight: normal;
@@ -43,9 +41,10 @@ body {
 }
 
 header {
-    position: sticky;
-    top: 0;
-    z-index: 2;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1;
 
     background-color: var(--light-color);
     opacity: 0.95;
@@ -74,7 +73,6 @@ img {
 
 .center-container {
     position: relative;
-    z-index: 1;
 
     max-width: 1110px;
     margin: 0 auto;
@@ -164,6 +162,8 @@ img {
 }
 
 .menu {
+    z-index: 1;
+
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -266,7 +266,7 @@ img {
 }
 
 .burger-icon {
-    z-index: 1;
+    z-index: 2;
 
     display: none;
 }
@@ -289,6 +289,7 @@ img {
     border-radius: 3px;
 
     background-color: var(--secondary-color);
+
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
                 opacity 0.55s ease;
 }
@@ -323,6 +324,36 @@ img {
 
 #burger:checked ~ .burger-icon .burger-line:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -6px);
+}
+
+.close {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: rgba(0,0,0,.4);
+    visibility: hidden;
+    opacity: 1;
+
+    transition: opacity 0.55s ease;
+}
+
+#burger:checked ~ .close {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: var(--light-color);
+    border-radius: 5px;
 }
 
 /* Other elements */
