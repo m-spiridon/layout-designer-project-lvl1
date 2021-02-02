@@ -8,7 +8,31 @@ function scroll() {
   document.querySelector('.progress-bar').style.width = progressBarWidth + '%';
 };
 
-//Close menu on click outside
+//Burger checked/unchecked
+
+document.querySelector('#burger').addEventListener('change', function() {
+  if (this.checked) {
+    document.querySelector('.menu-shadow').style.visibility = 'visible';
+    document.querySelector('.menu-shadow').style.opacity = '1';
+  } else {
+    document.querySelector('.menu-shadow').style.visibility = 'hidden';
+    document.querySelector('.menu-shadow').style.opacity = '0';
+    document.querySelector('.menu-shadow').style.zIndex = '0';
+  }
+});
+
+//Hide menu, popup and shadow on click on shadow
+
+document.querySelector('.menu-shadow').addEventListener('click', function() {
+  document.querySelector('#burger').checked = false;
+  document.querySelector('.menu-shadow').style.visibility = 'hidden';
+  document.querySelector('.menu-shadow').style.opacity = '0';
+  document.querySelector('.menu-shadow').style.zIndex = '0';
+  document.querySelector('.popup').style.visibility = 'hidden';
+  document.querySelector('.popup').style.opacity = '0';
+});
+
+//Show popup
 
 document.querySelector('.send-button').addEventListener('click', function() {
   document.querySelector('.menu-shadow').style.visibility = 'visible';
@@ -18,13 +42,7 @@ document.querySelector('.send-button').addEventListener('click', function() {
   document.querySelector('.popup').style.opacity = '1';
 });
 
-document.querySelector('.menu-shadow').addEventListener('click', function() {
-  document.querySelector('.menu-shadow').style.visibility = 'hidden';
-  document.querySelector('.menu-shadow').style.opacity = '0';
-  document.querySelector('.menu-shadow').style.zIndex = '0';
-  document.querySelector('.popup').style.visibility = 'hidden';
-  document.querySelector('.popup').style.opacity = '0';
-});
+//Hide popup on close button
 
 document.querySelector('.popup-close').addEventListener('click', function() {
   document.querySelector('.menu-shadow').style.visibility = 'hidden';

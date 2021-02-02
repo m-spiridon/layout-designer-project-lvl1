@@ -67,6 +67,8 @@ p:last-child {
 
 img {
     display: block;
+    width: 100%;
+    height: auto;
 }
 
 /* Common layout structure elements */
@@ -332,6 +334,7 @@ img {
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 0;
 
     background-color: rgba(0,0,0,.4);
     visibility: hidden;
@@ -340,24 +343,28 @@ img {
     transition: opacity 0.55s ease;
 }
 
-#burger:checked ~ .menu-shadow {
+/* #burger:checked ~ .menu-shadow {
     visibility: visible;
     opacity: 1;
-}
+} */
 
 .popup {
-    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
     top: 50%;
     left: 50%;
 
-    padding: 30px;
+    padding: 20px;
 
     border-radius: 5px;
 
     background-color: var(--light-color);
-    transform: translate(-50%, 10%);
+    transform: translate(-50%, -50%);
     visibility: hidden;
-    opacity: 0;
+    opacity: 1;
 
     transition: opacity 0.55s ease;
     z-index: 3;
@@ -441,8 +448,6 @@ img {
 }
 
 .section-img {
-    width: 100%;
-    height: auto;
     border-radius: 3%;
 
     filter: var(--drop-shadow);
