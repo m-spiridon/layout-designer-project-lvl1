@@ -40,6 +40,7 @@ document.querySelector('.send-button').addEventListener('click', function() {
   document.querySelector('.menu-shadow').style.zIndex = '3';
   document.querySelector('.popup').style.visibility = 'visible';
   document.querySelector('.popup').style.opacity = '1';
+  this.preventDefault();
 });
 
 //Hide popup on close button
