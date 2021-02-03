@@ -343,11 +343,6 @@ img {
     transition: opacity 0.55s ease;
 }
 
-/* #burger:checked ~ .menu-shadow {
-    visibility: visible;
-    opacity: 1;
-} */
-
 .popup {
     position: fixed;
     top: 50%;
@@ -369,6 +364,16 @@ img {
     opacity: 1;
 
     transition: opacity 0.55s ease;
+}
+
+.popup-close {
+    padding: 10px;
+    border-radius: 5px;
+
+    color: var(--white-color);
+
+    background-color: var(--primary-color);
+    cursor: pointer;
 }
 
 /* Other elements */
