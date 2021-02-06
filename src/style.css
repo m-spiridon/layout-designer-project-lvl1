@@ -506,13 +506,6 @@ img {
     opacity: 0.2;
 }
 
-.email-input-alert::placeholder {
-    color: red;
-    text-transform: uppercase;
-
-    opacity: 0.7;
-}
-
 .send-button {
     position: relative;
 
