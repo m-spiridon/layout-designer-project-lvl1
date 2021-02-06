@@ -37,7 +37,7 @@ document.querySelector('.menu-shadow').addEventListener('click', function() {
 function validateForm() {
 	valid = true;
   event.preventDefault();
-    if ( document.form.email.value == "" ) {
+    if ( document.form.email.value.trim() == "" ) {
       alert ( 'Извини, это поле не может быть пустым' );
       valid = false;
     } else {
