@@ -231,9 +231,9 @@
                 <h2 class="col title-3 color-white mb-md-30">Хотите узнать больше? Подпишитесь на обновления</h2>
                 <div class="col">
                     <label for="email" class="email-label mb-8 color-white text-bold">Электронная почта</label>
-                    <form class="email-form mb-8">
-                        <input id="email" class="email-input" type="text" placeholder="Ваш e-mail">
-                        <button class="send-button bg-primary" onclick="return false" width="60" height="50"></button>
+                    <form class="email-form mb-8" name="form" onSubmit="return validateForm()">
+                        <input id="email" class="email-input" type="text" placeholder="Ваш email" name="email">
+                        <button class="send-button bg-primary" type="submit" width="60" height="50"></button>
                     </form>
                     <p class="color-white fz-smaller">Подписываясь, вы принимаете <a class="color-white" href="https://zakon.rada.gov.ua/laws/show/2297-17#Text" target="_blank">правила сервиса</a></p>
                 </div>

@@ -34,14 +34,14 @@ document.querySelector('.menu-shadow').addEventListener('click', function() {
 
 //Show popup
 
-document.querySelector('.send-button').addEventListener('click', function() {
-  document.querySelector('.menu-shadow').style.visibility = 'visible';
-  document.querySelector('.menu-shadow').style.opacity = '1';
-  document.querySelector('.menu-shadow').style.zIndex = '3';
-  document.querySelector('.popup').style.visibility = 'visible';
-  document.querySelector('.popup').style.opacity = '1';
-  this.preventDefault();
-});
+// document.querySelector('.send-button').addEventListener('click', function() {
+//   document.querySelector('.menu-shadow').style.visibility = 'visible';
+//   document.querySelector('.menu-shadow').style.opacity = '1';
+//   document.querySelector('.menu-shadow').style.zIndex = '3';
+//   document.querySelector('.popup').style.visibility = 'visible';
+//   document.querySelector('.popup').style.opacity = '1';
+//   this.preventDefault();
+// });
 
 //Hide popup on close button
 
@@ -52,4 +52,19 @@ document.querySelector('.popup-close').addEventListener('click', function() {
   document.querySelector('.popup').style.visibility = 'hidden';
   document.querySelector('.popup').style.opacity = '0';
 });
+
+function validateForm() {
+	valid = true;
+    if ( document.form.email.value == "" ) {
+      alert ( 'Извини, это поле не может быть пустым' );
+      valid = false;
+    } else {
+      document.querySelector('.menu-shadow').style.visibility = 'visible';
+      document.querySelector('.menu-shadow').style.opacity = '1';
+      document.querySelector('.menu-shadow').style.zIndex = '3';
+      document.querySelector('.popup').style.visibility = 'visible';
+      document.querySelector('.popup').style.opacity = '1';
+    }
+  return valid;
+}
 
