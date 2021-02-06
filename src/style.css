@@ -8,7 +8,7 @@
     --light-dark-color: #b09a81;
     --blue-color: #1085c5;
     --body-copy-font: 'Open Sans', sans-serif;
-    --titles-font: 'Neucha', cursive;
+    --titles-font: 'Nunito', sans-serif;
     --drop-shadow: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.15));
 }
 
@@ -508,9 +508,9 @@ img {
 
 .email-input-alert::placeholder {
     color: red;
+    text-transform: uppercase;
 
     opacity: 0.7;
-    text-transform: uppercase;
 }
 
 .send-button {
