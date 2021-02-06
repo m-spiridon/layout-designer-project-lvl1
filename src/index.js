@@ -64,6 +64,7 @@ function validateForm() {
       document.querySelector('.menu-shadow').style.zIndex = '3';
       document.querySelector('.popup').style.visibility = 'visible';
       document.querySelector('.popup').style.opacity = '1';
+      document.querySelector('.send-button').preventDefault();
     }
   return valid;
 }
